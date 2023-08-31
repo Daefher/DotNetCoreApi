@@ -1,0 +1,20 @@
+﻿using Swashbuckle.AspNetCore.Annotations;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace sithec.Models
+{
+    public class humano
+    {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [SwaggerSchema(ReadOnly = true)]
+        public int Id { get; set; }
+        public string? Nombre {  get; set; }
+        public string? Sexo { get; set; }
+        public int Edad {  get; set; }
+        public double Altura { get; set; }
+        public double Peso { get; set; }
+
+    }
+}
